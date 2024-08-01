@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>��C��C++ | Sytmdm&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="# �̳кͶ�̬  C++�������ԣ���װ���̳У���̬ ��װ��ͨ������Ȩ�޵Ŀ��ƣ�private,protect,public) ����Ա������ò��ɼ���  �̳У�һ����̳�����һ����ĳ�Ա�����ͳ�Ա����  ���̳е��ࣺ���ࣨ���ࣩ �̳е��ࣺ���ࣨ�����ࣩ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="��C��C++">
+<meta property="og:url" content="https://sytmdm.github.io/2024/08/01/%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/index.html">
+<meta property="og:site_name" content="Sytmdm&#39;s Blog">
+<meta property="og:description" content="# �̳кͶ�̬  C++�������ԣ���װ���̳У���̬ ��װ��ͨ������Ȩ�޵Ŀ��ƣ�private,protect,public) ����Ա������ò��ɼ���  �̳У�һ����̳�����һ����ĳ�Ա�����ͳ�Ա����  ���̳е��ࣺ���ࣨ���ࣩ �̳е��ࣺ���ࣨ�����ࣩ">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-01T21:15:00.000Z">
+<meta property="article:modified_time" content="2024-08-01T21:15:00.000Z">
+<meta property="article:author" content="sytmdm">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Sytmdm's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Sytmdm&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sytmdm.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-继承和多态" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/08/01/%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/" class="article-date">
+  <time class="dt-published" datetime="2024-08-01T21:15:00.000Z" itemprop="datePublished">2024-08-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ��C��C++
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+# �̳кͶ�̬
+
+<p>C++�������ԣ���װ���̳У���̬</p>
+<h3 id="��װ��ͨ������E�޵L��oi�private-protect-public-����Ա������o��ɼ���"><a href="#��װ��ͨ������E�޵L��oi�private-protect-public-����Ա������o��ɼ���" class="headerlink" title="��װ��ͨ������Ȩ�޵Ŀ��ƣ�private,protect,public) ����Ա������ò��ɼ���"></a>��װ��ͨ������Ȩ�޵Ŀ��ƣ�private,protect,public) ����Ա������ò��ɼ���</h3><!--Ŀ�ģ�������Ա����-->
+
+<h3 id="�̳У�һ����̳�����һ����ĳ�Ա�����ͳ�Ա����"><a href="#�̳У�һ����̳�����һ����ĳ�Ա�����ͳ�Ա����" class="headerlink" title="�̳У�һ����̳�����һ����ĳ�Ա�����ͳ�Ա����"></a>�̳У�һ����̳�����һ����ĳ�Ա�����ͳ�Ա����</h3><!--Ŀ�ģ���ߴ���ĸ�����-->
+
+<p>���̳е��ࣺ���ࣨ���ࣩ</p>
+<p>�̳е��ࣺ���ࣨ�����ࣩ</p>
+<span id="more"></span>
+
+<p>�̳з�ʽ��</p>
+<p>1��public�����м̳�	public-&gt;public protected-&gt;protected private-&gt;private</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Student:public Person    //����public�����̳�Ȩ��</span><br></pre></td></tr></table></figure>
+
+<p>��1�������˽�г�Ա���Ա��̳У����ǲ��ɼ�</p>
+<p>��2��������Ե��ø���ı������г�ʼ�������������ֻ���ڳ�ʼ���б��е���</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">using CStrRef = const std::string &amp;;</span><br><span class="line">public:</span><br><span class="line">     Student(CStrRef name, int age, CStrRef ID,int score):Person(name,age,ID),score(score)&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>��3�������ȹ��죬����������</p>
+<p>��4���̳��е������ڱΣ����������ඨ��ͬ���������������ֻ�ܵ��õ������ຯ���������Ҫʹ�ã�Ҫ���������</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.Person::show();</span><br></pre></td></tr></table></figure>
+
+<p>2��proteced�������̳� public-&gt;protected protected-&gt;protected private-&gt;private</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Student:protected Person</span><br></pre></td></tr></table></figure>
+
+<!--����ͱ�������඼���Է��ʸñ���-->
+
+<p>3��private��˽�м̳� public-&gt;private protected-&gt;private private-&gt;private</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Student:private Person</span><br></pre></td></tr></table></figure>
+
+<!--�������Գ�Ա�������ж����ɼ�-->
+
+<p><strong>һ�㶼��public��private������ʹ��</strong></p>
+<p><strong>����ԭ�򣺶��޸Ĺرգ�����չ����</strong>  <!--������Ҫ�Ķ�ԭ��--></p>
+<p>4����̳�</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Derived:public Base1,public Base2     //�� , �����̳���������</span><br></pre></td></tr></table></figure>
+
+<p>���๹��˳��͹��캯������˳���޹أ��ͼ̳�˳���й�</p>
+<p>���������⣺���������඼����һ��ͬ������ʱ��������û���ֶ��岻��ȷ������</p>
+<p>������μ̳еĶ��������⣺��̳� virtual</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Base1:virtual public ULtraBase</span><br></pre></td></tr></table></figure>
+
+<p>��̳�ָ��-&gt;��̳б�����̳е���ı�������ڱ����ƫ������</p>
+<p>5�����</p>
+<p>��Ҫʹ�õ���Ķ������뵱ǰ����</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">class Base1</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">    Base1(int a):a(a)&#123;&#125;</span><br><span class="line">    void show()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;a:&quot; &lt;&lt; a;</span><br><span class="line">    &#125;</span><br><span class="line">    protected:</span><br><span class="line">        int a;</span><br><span class="line">&#125;;</span><br><span class="line">class Base2</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">    Base2(int b):b(b)&#123;&#125;</span><br><span class="line">    void show()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;b:&quot; &lt;&lt; b;</span><br><span class="line">    &#125;</span><br><span class="line">    protected:</span><br><span class="line">        int b;</span><br><span class="line">&#125;;</span><br><span class="line">class Derived</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">Derived(int a,int b):b1(a),b2(b)&#123;&#125;</span><br><span class="line">void show()</span><br><span class="line">&#123;</span><br><span class="line">    b1.show();</span><br><span class="line">    b2.show();</span><br><span class="line">&#125;</span><br><span class="line">private:</span><br><span class="line">    Base1 b1;   //����Ҫʹ������������д�����Ҫʹ�õ���Ķ���</span><br><span class="line">    Base2 b2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="��̬��"><a href="#��̬��" class="headerlink" title="��̬��"></a>��̬��</h3><p>��ͬ�Ĵ��룬��ͬ�ı�����ʽ</p>
+<p>Ŀ�ģ���ߴ���Ŀ�������</p>
+<p>����̬���ڱ����ڽ��̺����ĵ�ַ�󶨣���󶨣�     C��̬������ָ�루�ص���  C++��̬����������</p>
+<p>����̬���������ڲ�����ȷ�������ĵ�ַ���ٰ󶨣� C++���麯��virtual</p>
+<p><strong>�麯��ָ��</strong>���麯����</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtual void show()</span><br></pre></td></tr></table></figure>
+
+<p>��д�����ຯ���ͻ��ຯ����ȫ��ͬ������ֵ���������������б���</p>
+<p>ֻ����д������£����ܹ��ɶ�̬</p>
+<p>���أ���д�������ڱεĸ���һ��Ҫ���塣</p>
+<p>���ɶ�̬��Ҫ�أ�</p>
+<p>1������ָ��ָ���������</p>
+<p>2������Ҫ���麯�� <!--�ܹ�����ʹ��--></p>
+<p>3��������д�����麯��  <!--���ຯ���븸�ຯ����ȫ��ͬ--></p>
+<p>���麯����</p>
+<p>�������ĸ�ʽ</p>
+<p>�����ࣺ���д��麯�����࣬������ʵ��������</p>
+<!--ûʵ�ָ���Ĵ��麯����������Ȼ�ǳ�����-->
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//���д��麯�����ࣺ�����ࣺ������ʵ��������</span><br><span class="line">class Sort</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    virtual void sort(int *a, int size) = 0;//���麯��</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">class Base</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">    virtual void show()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;Base&quot; &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">    protected:</span><br><span class="line">        int a;</span><br><span class="line">&#125;;</span><br><span class="line">class Derived1:public Base</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public:</span><br><span class="line">    void show()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;Derived1&quot; &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">class Derived2:public Base</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public:</span><br><span class="line">    void show()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;Derived2&quot; &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //����ת��</span><br><span class="line">    // Derived *d=new Derived;//����ָ�룬ָ���������</span><br><span class="line">    // Base *b = d;</span><br><span class="line">    // b-&gt;show();</span><br><span class="line">    // d-&gt;show();</span><br><span class="line">    Base *a[2];</span><br><span class="line">    a[0] = new Derived1;</span><br><span class="line">    a[1] = new Derived2;</span><br><span class="line">    //��̬</span><br><span class="line">    for (int i = 0; i &lt; 2;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        a[i]-&gt;show();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>���������������ã�</strong></p>
+<p>����ת��ʱ���ͷŻ���ָ�룬��������������������������Դ�޷��ͷţ��������ԭ�����ǰѸ���������������Ϊ�麯��</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">class Base</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">    Base()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;���๹��\n&quot;;</span><br><span class="line">        a = new int;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    virtual ~Base() //����������</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;��������\n&quot;;</span><br><span class="line">        delete a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private:</span><br><span class="line">        int *a;</span><br><span class="line">&#125;;</span><br><span class="line">class Derived:public Base</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">    Derived():Base()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;���๹��\n&quot;;</span><br><span class="line">        b = new int;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Derived()</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;��������\n&quot;;</span><br><span class="line">        delete b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private:</span><br><span class="line">        int *b;</span><br><span class="line">&#125;;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    Base *d = new Derived;</span><br><span class="line">    delete d;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="����ڴ�ռ����"><a href="#����ڴ�ռ����" class="headerlink" title="����ڴ�ռ����"></a>����ڴ�ռ����</h3><p>��ͬ�Ķ���Ӧ�þ��в�ͬ���ڴ��ַ������ռһ���ֽڡ�</p>
+<p>��̬������ռ���ͣ�������ռ���麯������һ���麯����ռ8���ֽ�</p>
+<p>���������֮�䲻��ƴ�ӿռ�</p>
+<p>�����麯��ָ��֮�󣬱��������Լ������Ż��ڴ棬��ʹ���������Ŀռ��Լ�����ƴ�ӵĿռ����ƴ��</p>
+<p>�麯������һ����һ�ű����麯��ָ��ָ����𣬱�����Դ������麯��</p>
+<p>g++�������ڴ�洢˳��1������̳С��麯������̳�ָ��-&gt;�������-&gt;�麯��ָ��-&gt;�������</p>
+<p>?										   2�����麯��������̳У��麯��ָ��-&gt;�������-&gt;�������</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sytmdm.github.io/2024/08/01/%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/" data-id="clzbd21ng0002ekp0do26aumb" data-title="��C��C++" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/08/01/%E4%BB%8EC%E5%88%B0C++/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          从C到C++
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/08/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">八月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/08/01/%E4%BB%8EC%E5%88%B0C++/">从C到C++</a>
+          </li>
+        
+          <li>
+            <a href="/2024/08/01/%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/">��C��C++</a>
+          </li>
+        
+          <li>
+            <a href="/2024/08/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 sytmdm<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
