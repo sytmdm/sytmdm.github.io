@@ -296,7 +296,7 @@ author:
     # You can also use a link of image.
     url: /images/icons/headpag1.jpg
     # If true, the avatar would be displayed in a circle.
-    rounded: false
+    rounded: true
     # Opacity of avatar (value: 0 ~ 1)
     opacity: 1
     # Mouse hover animation
