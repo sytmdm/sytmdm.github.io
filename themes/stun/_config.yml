@@ -138,11 +138,11 @@ header:
   height: 80%
   # Background image of site header.
   bg_image:
-    enable: /images/icons/pag1.jpg
+    enable: false
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
+    url: /images/icons/pag1.jpg
   # Banner area.
   banner:
     # Effective for all pages.
@@ -172,7 +172,7 @@ header:
 body:
   # Background image of site body.
   bg_image:
-    enable: /images/icons/pag1.jpg
+    enable: false
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
