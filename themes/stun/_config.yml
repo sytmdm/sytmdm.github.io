@@ -148,7 +148,7 @@ header:
     # Effective for all pages.
     enable: true
     # You can override it by `header_title` in Front-Matter of .md
-    title: Hello Stun
+    title: Mr-Xiao'Blog
     # You can override it by `header_subtitle` in Front-Matter of .md
     subtitle: An elegant theme for Hexo
   # Mask effect of the background image.
@@ -303,7 +303,7 @@ author:
     # Optional values: turn | shake
     animation: turn
   # Your favorite motto.
-  motto: Hello Stun
+  motto: 须知少时凌云志，曾许人间第一流。
 
 # Social links
 # Value before `||` is the target link, value after `||` is the name of FontAwesome icon.
